@@ -77,7 +77,7 @@ namespace DersEngine
 
 				if (frameCounter >= 1)
 				{
-					//std::cout << fps << " fps, " << tps << " tps" << std::endl;
+					Debug::Log(fps, " fps, ", tps, " tps");
 					fps = 0;
 					tps = 0;
 					frameCounter = 0;

@@ -1,9 +1,9 @@
 #pragma once
 
-#include "GameComponent.h"
-#include "utils/Debug.h"
-#include "core/GameApplication.h"
 #include <functional>
+
+#include "GameComponent.h"
+#include "core/GameApplication.h"
 
 namespace DersEngine
 {
