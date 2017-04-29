@@ -9,8 +9,6 @@ namespace DersEngine
 {
 	namespace core
 	{
-		using namespace utils;
-
 		class TestComponent : public GameComponent
 		{
 		public:

@@ -24,10 +24,6 @@ namespace DersEngine
 				c->OnUpdate(dt);
 			}
 		}
-
-	
-
-		
 	}
 }
 

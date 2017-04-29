@@ -7,7 +7,6 @@ namespace DersEngine
 {
 	namespace input 
 	{
-		using namespace utils;
 		class InputManager
 		{
 		private:

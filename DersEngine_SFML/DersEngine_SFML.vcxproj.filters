@@ -28,63 +28,63 @@
     <None Include="sfml-window-d-2.dll" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Private\Main.cpp">
+    <ClCompile Include="Engine\Private\core\GameApplication.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Private\core\GameApplication.cpp">
+    <ClCompile Include="Engine\Private\core\GameObject.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Private\graphics\Window.cpp">
+    <ClCompile Include="Engine\Private\core\Scene.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Private\input\InputManager.cpp">
+    <ClCompile Include="Engine\Private\core\SceneManager.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Private\core\Scene.cpp">
+    <ClCompile Include="Engine\Private\core\TestComponent.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Private\event\EventDispatcher.cpp">
+    <ClCompile Include="Engine\Private\event\EventDispatcher.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Private\core\GameObject.cpp">
+    <ClCompile Include="Engine\Private\graphics\Window.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Private\core\TestComponent.cpp">
+    <ClCompile Include="Engine\Private\input\InputManager.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Private\core\SceneManager.cpp">
+    <ClCompile Include="Main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Public\core\GameApplication.h">
+    <ClInclude Include="Engine\Public\core\GameApplication.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Public\core\Scene.h">
+    <ClInclude Include="Engine\Public\core\GameComponent.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Public\graphics\Window.h">
+    <ClInclude Include="Engine\Public\core\GameObject.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Public\core\GameObject.h">
+    <ClInclude Include="Engine\Public\core\Scene.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Public\core\GameComponent.h">
+    <ClInclude Include="Engine\Public\core\SceneManager.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Public\input\InputManager.h">
+    <ClInclude Include="Engine\Public\core\TestComponent.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Public\event\EventDispatcher.h">
+    <ClInclude Include="Engine\Public\event\EventDispatcher.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Public\core\TestComponent.h">
+    <ClInclude Include="Engine\Public\graphics\Window.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Public\utils\Debug.h">
+    <ClInclude Include="Engine\Public\input\InputManager.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Public\core\SceneManager.h">
+    <ClInclude Include="Engine\Public\utils\Debug.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

@@ -13,8 +13,6 @@ namespace DersEngine
 {
 	namespace events
 	{
-		using namespace utils;
-
 		class EventDispatcher
 		{
 			using EventTable = std::unordered_map<std::string, std::vector<std::function<void()>>>;
@@ -34,9 +32,9 @@ namespace DersEngine
 
 			static void Notify(const std::string& eventType)
 			{
-				for (const auto& eventDelegate : GetEventTable()[eventType])
+				for (const auto& registeredFunction : GetEventTable()[eventType])
 				{
-					eventDelegate();
+					registeredFunction();
 				}
 			}
 
@@ -47,9 +45,9 @@ namespace DersEngine
 					std::string eventKey = GetEventQueue().front();
 					GetEventQueue().pop_front();
 			
-					for (const auto& eventDelegate : GetEventTable()[eventKey])
+					for (const auto& registeredFunction : GetEventTable()[eventKey])
 					{
-						eventDelegate();
+						registeredFunction();
 					}
 				}
 			}

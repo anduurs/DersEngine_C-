@@ -69,7 +69,7 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <IncludePath>C:\Users\Anders\Documents\SFML-2.4.0\include;C:\Users\Anders\Documents\Visual Studio 2015\Projects\DersEngine_SFML\DersEngine_SFML\Public;$(IncludePath)</IncludePath>
+    <IncludePath>C:\Users\Anders\Documents\SFML-2.4.0\include;C:\Users\Anders\Documents\Visual Studio 2015\Projects\DersEngine_SFML\DersEngine_SFML\Engine\Public;$(IncludePath)</IncludePath>
     <LibraryPath>C:\Users\Anders\Documents\SFML-2.4.0\lib;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -134,27 +134,27 @@
     <None Include="sfml-window-d-2.dll" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Private\core\GameApplication.cpp" />
-    <ClCompile Include="Private\core\GameObject.cpp" />
-    <ClCompile Include="Private\core\Scene.cpp" />
-    <ClCompile Include="Private\core\SceneManager.cpp" />
-    <ClCompile Include="Private\core\TestComponent.cpp" />
-    <ClCompile Include="Private\event\EventDispatcher.cpp" />
-    <ClCompile Include="Private\graphics\Window.cpp" />
-    <ClCompile Include="Private\input\InputManager.cpp" />
-    <ClCompile Include="Private\Main.cpp" />
+    <ClCompile Include="Engine\Private\core\GameApplication.cpp" />
+    <ClCompile Include="Engine\Private\core\GameObject.cpp" />
+    <ClCompile Include="Engine\Private\core\Scene.cpp" />
+    <ClCompile Include="Engine\Private\core\SceneManager.cpp" />
+    <ClCompile Include="Engine\Private\core\TestComponent.cpp" />
+    <ClCompile Include="Engine\Private\event\EventDispatcher.cpp" />
+    <ClCompile Include="Engine\Private\graphics\Window.cpp" />
+    <ClCompile Include="Engine\Private\input\InputManager.cpp" />
+    <ClCompile Include="Main.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Public\core\GameApplication.h" />
-    <ClInclude Include="Public\core\GameComponent.h" />
-    <ClInclude Include="Public\core\GameObject.h" />
-    <ClInclude Include="Public\core\Scene.h" />
-    <ClInclude Include="Public\core\SceneManager.h" />
-    <ClInclude Include="Public\core\TestComponent.h" />
-    <ClInclude Include="Public\event\EventDispatcher.h" />
-    <ClInclude Include="Public\graphics\Window.h" />
-    <ClInclude Include="Public\input\InputManager.h" />
-    <ClInclude Include="Public\utils\Debug.h" />
+    <ClInclude Include="Engine\Public\core\GameApplication.h" />
+    <ClInclude Include="Engine\Public\core\GameComponent.h" />
+    <ClInclude Include="Engine\Public\core\GameObject.h" />
+    <ClInclude Include="Engine\Public\core\Scene.h" />
+    <ClInclude Include="Engine\Public\core\SceneManager.h" />
+    <ClInclude Include="Engine\Public\core\TestComponent.h" />
+    <ClInclude Include="Engine\Public\event\EventDispatcher.h" />
+    <ClInclude Include="Engine\Public\graphics\Window.h" />
+    <ClInclude Include="Engine\Public\input\InputManager.h" />
+    <ClInclude Include="Engine\Public\utils\Debug.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

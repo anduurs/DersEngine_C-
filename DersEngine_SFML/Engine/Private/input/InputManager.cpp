@@ -30,7 +30,6 @@ namespace DersEngine
 
 				case sf::Event::KeyPressed:
 				{
-					
 					events::EventDispatcher::Dispatch("KeyPressedEvent");
 					break;
 				}
