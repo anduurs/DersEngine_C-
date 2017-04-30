@@ -30,6 +30,12 @@ namespace DersEngine
 				GetEventQueue().emplace_back(eventType);
 			}
 
+			template<typename ...Args>
+			static void Dispatch(const std::string& eventType, Args&... args)
+			{
+				GetEventQueue().emplace_back(eventType);
+			}
+
 			static void Notify(const std::string& eventType)
 			{
 				for (const auto& registeredFunction : GetEventTable()[eventType])

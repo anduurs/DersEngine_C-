@@ -73,7 +73,7 @@
     <LibraryPath>C:\Users\Anders\Documents\SFML-2.4.0\lib;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    <IncludePath>C:\Users\Anders\Documents\SFML-2.4.0\include;$(IncludePath)</IncludePath>
+    <IncludePath>C:\Users\Anders\Documents\SFML-2.4.0\include;C:\Users\Anders\Documents\Visual Studio 2015\Projects\DersEngine_SFML\DersEngine_SFML\Engine\Public;$(IncludePath)</IncludePath>
     <LibraryPath>C:\Users\Anders\Documents\SFML-2.4.0\lib;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
@@ -117,7 +117,7 @@
     <Link>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
-      <AdditionalDependencies>sfml-graphics.lib;sfml-window.lib;sfml-system.lib;sfml-audio.lib;sfml-network.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>sfml-graphics-d.lib;sfml-window-d.lib;sfml-system-d.lib;sfml-audio-d.lib;sfml-network-d.lib;opengl32.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
@@ -139,7 +139,6 @@
     <ClCompile Include="Engine\Private\core\Scene.cpp" />
     <ClCompile Include="Engine\Private\core\SceneManager.cpp" />
     <ClCompile Include="Engine\Private\core\TestComponent.cpp" />
-    <ClCompile Include="Engine\Private\event\EventDispatcher.cpp" />
     <ClCompile Include="Engine\Private\graphics\Window.cpp" />
     <ClCompile Include="Engine\Private\input\InputManager.cpp" />
     <ClCompile Include="Main.cpp" />

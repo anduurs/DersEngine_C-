@@ -43,9 +43,6 @@
     <ClCompile Include="Engine\Private\core\TestComponent.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Engine\Private\event\EventDispatcher.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="Engine\Private\graphics\Window.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>

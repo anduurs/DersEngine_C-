@@ -6,7 +6,7 @@ namespace DersEngine
 	{
 		void TestComponent::OnBegin() 
 		{
-			Debug::Log("OnBegin");
+			Debug::Log("OnBegin ");
 			events::EventDispatcher::Register("KeyPressedEvent", 
 				std::bind(&TestComponent::OnKeyPressed, this));
 		}

@@ -14,7 +14,7 @@ namespace DersEngine
 		public:
 			InputManager();
 			~InputManager();
-
+			static void Init();
 			static void Update();
 		};
 	}
