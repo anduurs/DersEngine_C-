@@ -29,7 +29,7 @@ namespace DersEngine
 			{
 				case sf::Event::KeyPressed:
 				{
-					Debug::Log("KEY PRESSED: ", event.key.code);
+					Debug::Log("KEY PRESSED EVENT");
 					break;
 				}
 			}

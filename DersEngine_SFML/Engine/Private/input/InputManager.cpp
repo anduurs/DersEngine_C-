@@ -6,7 +6,7 @@ namespace DersEngine
 {
 	namespace input
 	{
-		std::unique_ptr<events::Signal<sf::Event>> InputManager::inputSignal = std::make_unique<events::Signal<sf::Event>>();
+		InputSignalEvent InputManager::inputSignal = std::make_unique<events::Signal<sf::Event>>();
 
 		InputManager::InputManager()
 		{

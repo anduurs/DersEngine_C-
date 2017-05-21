@@ -10,15 +10,17 @@ namespace DersEngine
 {
 	namespace input 
 	{
+		using InputSignalEvent = std::unique_ptr<events::Signal<sf::Event>>;
+
 		class InputManager
-		{
+		{	
 		public:
 			InputManager();
 			~InputManager();
 			static void Init();
 			static void Update();
 			
-			static std::unique_ptr<events::Signal<sf::Event>> inputSignal;
+			static InputSignalEvent inputSignal;
 		};
 	}
 }
