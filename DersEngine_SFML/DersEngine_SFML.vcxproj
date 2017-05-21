@@ -151,6 +151,7 @@
     <ClInclude Include="Engine\Public\core\SceneManager.h" />
     <ClInclude Include="Engine\Public\core\TestComponent.h" />
     <ClInclude Include="Engine\Public\event\EventDispatcher.h" />
+    <ClInclude Include="Engine\Public\event\Signal.h" />
     <ClInclude Include="Engine\Public\graphics\Window.h" />
     <ClInclude Include="Engine\Public\input\InputManager.h" />
     <ClInclude Include="Engine\Public\utils\Debug.h" />

@@ -1,13 +1,16 @@
 #include "input/InputManager.h"
 
-#include "graphics/Window.h"
+
 
 namespace DersEngine
 {
 	namespace input
 	{
+		std::unique_ptr<events::Signal<sf::Event>> InputManager::inputSignal = std::make_unique<events::Signal<sf::Event>>();
+
 		InputManager::InputManager()
 		{
+			
 		}
 
 		InputManager::~InputManager()
@@ -20,6 +23,7 @@ namespace DersEngine
 
 			while (graphics::Window::PollEvent(event))
 			{
+				inputSignal->Dispatch(event);
 				switch (event.type)
 				{
 				case sf::Event::Closed:
@@ -30,7 +34,7 @@ namespace DersEngine
 
 				case sf::Event::KeyPressed:
 				{
-					events::EventDispatcher::Dispatch("KeyPressedEvent");
+					
 					break;
 				}
 

@@ -65,7 +65,7 @@ namespace DersEngine
 				while (accumulator >= SECONDS_PER_UPDATE)
 				{
 					ProcessInputs();
-					events::EventDispatcher::ProcessEvents();
+			
 					Update(dt);
 
 					tps++;
@@ -77,7 +77,7 @@ namespace DersEngine
 
 				if (frameCounter >= 1)
 				{
-					Debug::Log(fps, " fps, ", tps, " tps");
+					//Debug::Log(fps, " fps, ", tps, " tps");
 					fps = 0;
 					tps = 0;
 					frameCounter = 0;

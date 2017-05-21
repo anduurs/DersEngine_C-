@@ -84,5 +84,8 @@
     <ClInclude Include="Engine\Public\utils\Debug.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Engine\Public\event\Signal.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
