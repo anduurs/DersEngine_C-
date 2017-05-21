@@ -9,7 +9,7 @@ namespace DersEngine
 			Debug::Log("OnBegin");
 
 			m_InputSignalConnection = InputManager::inputSignal->AddListener(
-				std::bind(&TestComponent::OnKeyPressed, this, std::placeholders::_1));
+				std::bind(&TestComponent::OnInput, this, std::placeholders::_1));
 		}
 
 		void TestComponent::OnUpdate(float deltaTime) 
@@ -19,18 +19,17 @@ namespace DersEngine
 
 		void TestComponent::OnDestroy() 
 		{
-			InputManager::inputSignal->RemoveListener(m_InputSignalConnection);
 			Debug::Log("OnDestroy");
+			InputManager::inputSignal->RemoveListener(m_InputSignalConnection);
 		}
 
-		void TestComponent::OnKeyPressed(const sf::Event& event)
+		void TestComponent::OnInput(const sf::Event& event)
 		{
 			switch (event.type)
 			{
 				case sf::Event::KeyPressed:
 				{
-					Debug::Log("ON KEY PRESSED");
-					InputManager::inputSignal->RemoveListener(m_InputSignalConnection);
+					Debug::Log("KEY PRESSED: ", event.key.code);
 					break;
 				}
 			}

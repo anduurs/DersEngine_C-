@@ -21,6 +21,7 @@ namespace DersEngine
 		{
 			std::cout << "Game started" << std::endl;
 			m_Running = true;
+			InputManager::Init();
 			RunGameLoop();
 		}
 

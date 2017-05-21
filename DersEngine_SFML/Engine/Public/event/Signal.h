@@ -33,7 +33,7 @@ namespace DersEngine
 					std::remove_if(m_Targets.begin(), m_Targets.end(),
 					[](wp_target t) 
 					{
-						return !t.lock(); 
+						return t.expired(); 
 					}), 
 					m_Targets.end());
 			}
@@ -49,12 +49,11 @@ namespace DersEngine
 			void RemoveListener(token& t)
 			{
 				t.reset();
+				CleanUp();
 			}
 
 			void Dispatch(Args... args)
 			{
-				CleanUp();
-
 				for (auto wp : m_Targets)
 				{
 					if (auto sp = wp.lock())

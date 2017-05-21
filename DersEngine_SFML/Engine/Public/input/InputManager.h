@@ -12,8 +12,6 @@ namespace DersEngine
 	{
 		class InputManager
 		{
-		private:
-				
 		public:
 			InputManager();
 			~InputManager();

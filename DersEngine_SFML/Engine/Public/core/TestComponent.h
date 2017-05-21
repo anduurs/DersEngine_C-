@@ -16,7 +16,7 @@ namespace DersEngine
 			virtual void OnUpdate(float deltaTime) override;
 			virtual void OnDestroy() override;
 
-			void OnKeyPressed(const sf::Event& event);
+			void OnInput(const sf::Event& event);
 
 		private:
 			std::shared_ptr<void> m_InputSignalConnection;
