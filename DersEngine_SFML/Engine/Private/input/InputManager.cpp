@@ -10,16 +10,12 @@ namespace DersEngine
 
 		InputManager::InputManager()
 		{
-			
+			m_InputSignalConnection = inputSignal->AddListener(
+				std::bind(&InputManager::OnInput, this, std::placeholders::_1));
 		}
 
 		InputManager::~InputManager()
 		{
-		}
-
-		void InputManager::Init()
-		{
-
 		}
 
 		void InputManager::Update()
@@ -29,17 +25,20 @@ namespace DersEngine
 			while (graphics::Window::PollEvent(event))
 			{
 				inputSignal->Dispatch(event);
-				switch (event.type)
-				{
-					case sf::Event::Closed:
-					{
-						graphics::Window::Close();
-						break;
-					}
+			}
+		}
 
-					default:
-						break;
-				}
+		void InputManager::CleanUp()
+		{
+			inputSignal->RemoveListener(m_InputSignalConnection);
+		}
+
+		void InputManager::OnInput(const sf::Event& event)
+		{
+			if (event.type == sf::Event::Closed 
+				|| event.key.code == sf::Keyboard::Escape)
+			{
+				graphics::Window::Close();
 			}
 		}
 	}

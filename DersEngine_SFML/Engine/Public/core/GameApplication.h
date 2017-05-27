@@ -23,6 +23,7 @@ namespace DersEngine
 
 			static std::unique_ptr<Scene> m_CurrentScene;
 			std::unique_ptr<Window> m_Window;
+			std::unique_ptr<InputManager> m_InputManager;
 
 			void RunGameLoop();
 			void ProcessInputs();

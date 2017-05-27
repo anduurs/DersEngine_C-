@@ -10,6 +10,7 @@ namespace DersEngine
 			const std::string& title, bool vsync, bool fullScreen)
 		{
 			m_Window = std::make_unique<Window>(width, height, title, vsync, fullScreen);
+			m_InputManager = std::make_unique<InputManager>();
 		}
 
 		GameApplication::~GameApplication()
@@ -21,7 +22,6 @@ namespace DersEngine
 		{
 			std::cout << "Game started" << std::endl;
 			m_Running = true;
-			InputManager::Init();
 			RunGameLoop();
 		}
 
@@ -29,6 +29,7 @@ namespace DersEngine
 		{
 			std::cout << "Game stopped" << std::endl;
 			m_Running = false;
+			m_InputManager->CleanUp();
 		}
 
 		void GameApplication::RunGameLoop()
@@ -93,7 +94,7 @@ namespace DersEngine
 
 		void GameApplication::ProcessInputs()
 		{
-			InputManager::Update();
+			m_InputManager->Update();
 		}
 
 		void GameApplication::Update(float deltaTime)

@@ -69,7 +69,7 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <IncludePath>C:\Users\Anders\Documents\SFML-2.4.0\include;C:\Users\Anders\Documents\Visual Studio 2015\Projects\DersEngine_SFML\DersEngine_SFML\Engine\Public;$(IncludePath)</IncludePath>
+    <IncludePath>E:\Github\DersEngine_C-\DersEngine_SFML\Engine\Public;C:\Users\Anders\Documents\SFML-2.4.0\include;C:\Users\Anders\Documents\Visual Studio 2015\Projects\DersEngine_SFML\DersEngine_SFML\Engine\Public;$(IncludePath)</IncludePath>
     <LibraryPath>C:\Users\Anders\Documents\SFML-2.4.0\lib;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">

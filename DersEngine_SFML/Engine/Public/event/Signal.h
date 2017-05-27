@@ -29,20 +29,22 @@ namespace DersEngine
 
 			void CleanUp()
 			{
-				m_Targets.erase(
+				if (m_Targets.size() > 0) {
+					m_Targets.erase(
 					std::remove_if(m_Targets.begin(), m_Targets.end(),
-					[](wp_target t) 
-					{
-						return t.expired(); 
-					}), 
+						[](wp_target t)
+						{
+							return t.expired();
+						}),
 					m_Targets.end());
+				}	
 			}
 		public:
-
-			token AddListener(target callBackFunction)
+			
+			token AddListener(target callback)
 			{
-				auto t = make_target(std::move(callBackFunction));
-				m_Targets.push_back(wp_target(t));
+				auto t = make_target(std::move(callback));
+				m_Targets.emplace_back(wp_target(t));
 				return t;
 			}
 

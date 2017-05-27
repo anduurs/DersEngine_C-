@@ -1,6 +1,5 @@
 #pragma once
 
-#include "event/EventDispatcher.h"
 #include "event/Signal.h"
 #include "utils/Debug.h"
 
@@ -15,12 +14,17 @@ namespace DersEngine
 		class InputManager
 		{	
 		public:
+			static InputSignalEvent inputSignal;
+		private:
+			std::shared_ptr<void> m_InputSignalConnection;
+		public:
 			InputManager();
 			~InputManager();
-			static void Init();
-			static void Update();
+			void Update();
+			void CleanUp();
+		private:
+			void OnInput(const sf::Event& event);
 			
-			static InputSignalEvent inputSignal;
 		};
 	}
 }

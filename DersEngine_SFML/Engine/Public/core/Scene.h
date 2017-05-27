@@ -14,13 +14,14 @@ namespace DersEngine
 		private:
 			std::vector<std::unique_ptr<GameObject>> m_GameObjects;
 			std::string m_SceneName;
+
+			void Refresh();
 		public:
 			Scene(const std::string& name);
 			virtual ~Scene();
 
-			void Refresh();
-			void Update(float deltaTime);
-			void Render();
+			virtual void Update(float deltaTime);
+			virtual void Render();
 
 			void AddGameObject(std::unique_ptr<GameObject> gameObject);
 		};

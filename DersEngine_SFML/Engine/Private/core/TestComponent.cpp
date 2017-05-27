@@ -10,6 +10,8 @@ namespace DersEngine
 
 			m_InputSignalConnection = InputManager::inputSignal->AddListener(
 				std::bind(&TestComponent::OnInput, this, std::placeholders::_1));
+
+			//m_InputSignalConnection = InputManager::inputSignal->AddListener(&TestComponent::OnInput, *this);
 		}
 
 		void TestComponent::OnUpdate(float deltaTime) 
